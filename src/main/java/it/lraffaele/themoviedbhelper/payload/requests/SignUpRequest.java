@@ -13,9 +13,9 @@ public class SignUpRequest {
   @Size(min = 6, max = 20)
   private String username;
 
-  @Pattern(regexp = "^[a-zA-Z0-9]{6,10}$",
+  @Pattern(regexp = "^[a-zA-Z0-9]{6,50}$",
       message = "La password inserita può contenere solo caratteri alfanumerici."
-          + " La lunghezza deve essere compresa tra 6 e 10")
+          + " La lunghezza deve essere compresa tra 6 e 50")
   private String password;
 
   @NotBlank
