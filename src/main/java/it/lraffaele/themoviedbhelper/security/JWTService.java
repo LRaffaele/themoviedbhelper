@@ -1,11 +1,10 @@
-package it.lraffaele.themoviedbhelper.security.service;
+package it.lraffaele.themoviedbhelper.security;
 
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.JWTCreator;
 import com.auth0.jwt.algorithms.Algorithm;
 import com.auth0.jwt.exceptions.TokenExpiredException;
 import com.auth0.jwt.interfaces.DecodedJWT;
-import it.lraffaele.themoviedbhelper.security.UserPrincipal;
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;
 import lombok.RequiredArgsConstructor;
@@ -46,7 +45,7 @@ public class JWTService {
   public static DecodedJWT verifyJwt (String token) throws TokenExpiredException {
     DecodedJWT decodedJwt = null;
     try {
-      decodedJwt = JWT.require(Algorithm.HMAC512(SECRETKEY_STATIC)).build().verify(token);
+      decodedJwt = JWT.require(Algorithm.HMAC256(SECRETKEY_STATIC)).build().verify(token);
       return decodedJwt;
     } catch (TokenExpiredException ex){
       return null;

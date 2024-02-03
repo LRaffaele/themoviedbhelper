@@ -1,4 +1,4 @@
-package it.lraffaele.themoviedbhelper.security.service;
+package it.lraffaele.themoviedbhelper.security;
 
 import it.lraffaele.themoviedbhelper.entities.User;
 import it.lraffaele.themoviedbhelper.repositories.UserRepository;

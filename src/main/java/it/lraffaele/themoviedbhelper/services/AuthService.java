@@ -7,7 +7,7 @@ import it.lraffaele.themoviedbhelper.payload.requests.UserSignUpRequest;
 import it.lraffaele.themoviedbhelper.payload.response.JwtAuthenticationResponse;
 import it.lraffaele.themoviedbhelper.repositories.AuthorityRepository;
 import it.lraffaele.themoviedbhelper.repositories.UserRepository;
-import it.lraffaele.themoviedbhelper.security.service.JWTService;
+import it.lraffaele.themoviedbhelper.security.JWTService;
 import it.lraffaele.themoviedbhelper.security.UserPrincipal;
 import java.util.Optional;
 import lombok.RequiredArgsConstructor;

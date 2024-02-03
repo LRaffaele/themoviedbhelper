@@ -1,8 +1,6 @@
 package it.lraffaele.themoviedbhelper.security;
 
 import com.auth0.jwt.interfaces.DecodedJWT;
-import it.lraffaele.themoviedbhelper.security.service.CustomUserDetailsService;
-import it.lraffaele.themoviedbhelper.security.service.JWTService;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
@@ -34,8 +32,9 @@ public class JwtAuthorizationFilter extends OncePerRequestFilter {
       DecodedJWT decodedJWT = JWTService.verifyJwt(bearerToken);
       if (StringUtils.hasText(bearerToken) && decodedJWT != null) {
 
-        long userId = Long.parseLong(decodedJWT.getId()); //get userId from JSON;
-        UserDetails userDetails = customUserDetailsService.loadUserByUserId(userId); // use userID to create UserDetails;
+        var claim = decodedJWT.getClaim("id").toString();
+        long userId = Long.parseLong(claim);
+        UserDetails userDetails = customUserDetailsService.loadUserByUserId(userId);
 
         if(!userDetails.isEnabled()) {
           throw new DisabledException("Account not enabled");
@@ -53,7 +52,7 @@ public class JwtAuthorizationFilter extends OncePerRequestFilter {
   }
 
   private String extractBearerTokenFromAuthHeader (HttpServletRequest request){
-    String authHeader = request.getHeader("Authorisation");
+    String authHeader = request.getHeader("Authorization");
     if(StringUtils.hasText(authHeader) && authHeader.startsWith("Bearer ")){
       return authHeader.substring(7);
     }
