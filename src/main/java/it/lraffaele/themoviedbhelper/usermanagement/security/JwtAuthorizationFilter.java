@@ -1,6 +1,7 @@
-package it.lraffaele.themoviedbhelper.security;
+package it.lraffaele.themoviedbhelper.usermanagement.security;
 
 import com.auth0.jwt.interfaces.DecodedJWT;
+import it.lraffaele.themoviedbhelper.usermanagement.service.JWTService;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;

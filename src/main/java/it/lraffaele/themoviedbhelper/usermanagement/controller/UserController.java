@@ -1,6 +1,6 @@
-package it.lraffaele.themoviedbhelper.controllers;
+package it.lraffaele.themoviedbhelper.usermanagement.controller;
 
-import it.lraffaele.themoviedbhelper.services.UserService;
+import it.lraffaele.themoviedbhelper.usermanagement.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;

@@ -1,11 +1,10 @@
-package it.lraffaele.themoviedbhelper.security;
+package it.lraffaele.themoviedbhelper.usermanagement.security;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import it.lraffaele.themoviedbhelper.entities.User;
-import it.lraffaele.themoviedbhelper.payload.response.JwtAuthenticationResponse;
+import it.lraffaele.themoviedbhelper.usermanagement.entity.User;
+import it.lraffaele.themoviedbhelper.usermanagement.payload.JwtAuthenticationResponse;
 import java.util.Collection;
 import java.util.List;
-import java.util.Set;
 import java.util.stream.Collectors;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.Authentication;

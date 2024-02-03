@@ -1,12 +1,10 @@
-package it.lraffaele.themoviedbhelper.services;
+package it.lraffaele.themoviedbhelper.usermanagement.service;
 
-import it.lraffaele.themoviedbhelper.entities.User;
-import it.lraffaele.themoviedbhelper.payload.response.GetUserResponse;
-import it.lraffaele.themoviedbhelper.repositories.UserRepository;
+import it.lraffaele.themoviedbhelper.usermanagement.payload.GetUserResponse;
+import it.lraffaele.themoviedbhelper.usermanagement.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 @Service

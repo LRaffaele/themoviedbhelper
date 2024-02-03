@@ -1,4 +1,4 @@
-package it.lraffaele.themoviedbhelper.entities;
+package it.lraffaele.themoviedbhelper.usermanagement.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

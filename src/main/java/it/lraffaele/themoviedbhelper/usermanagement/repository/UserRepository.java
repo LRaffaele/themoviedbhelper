@@ -1,7 +1,7 @@
-package it.lraffaele.themoviedbhelper.repositories;
+package it.lraffaele.themoviedbhelper.usermanagement.repository;
 
-import it.lraffaele.themoviedbhelper.entities.User;
-import it.lraffaele.themoviedbhelper.payload.response.GetUserResponse;
+import it.lraffaele.themoviedbhelper.usermanagement.entity.User;
+import it.lraffaele.themoviedbhelper.usermanagement.payload.GetUserResponse;
 import java.util.Optional;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;

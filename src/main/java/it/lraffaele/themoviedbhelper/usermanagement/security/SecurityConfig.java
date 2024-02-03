@@ -1,4 +1,4 @@
-package it.lraffaele.themoviedbhelper.security;
+package it.lraffaele.themoviedbhelper.usermanagement.security;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.*;

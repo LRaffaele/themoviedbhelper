@@ -1,4 +1,4 @@
-package it.lraffaele.themoviedbhelper.payload.response;
+package it.lraffaele.themoviedbhelper.usermanagement.payload;
 
 import java.util.Set;
 import lombok.Getter;

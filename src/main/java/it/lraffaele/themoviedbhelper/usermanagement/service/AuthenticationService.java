@@ -1,14 +1,13 @@
-package it.lraffaele.themoviedbhelper.services;
+package it.lraffaele.themoviedbhelper.usermanagement.service;
 
-import it.lraffaele.themoviedbhelper.entities.Authority;
-import it.lraffaele.themoviedbhelper.entities.User;
-import it.lraffaele.themoviedbhelper.payload.requests.UserLoginRequest;
-import it.lraffaele.themoviedbhelper.payload.requests.UserSignUpRequest;
-import it.lraffaele.themoviedbhelper.payload.response.JwtAuthenticationResponse;
-import it.lraffaele.themoviedbhelper.repositories.AuthorityRepository;
-import it.lraffaele.themoviedbhelper.repositories.UserRepository;
-import it.lraffaele.themoviedbhelper.security.JWTService;
-import it.lraffaele.themoviedbhelper.security.UserPrincipal;
+import it.lraffaele.themoviedbhelper.usermanagement.payload.JwtAuthenticationResponse;
+import it.lraffaele.themoviedbhelper.usermanagement.security.UserPrincipal;
+import it.lraffaele.themoviedbhelper.usermanagement.entity.Authority;
+import it.lraffaele.themoviedbhelper.usermanagement.repository.AuthorityRepository;
+import it.lraffaele.themoviedbhelper.usermanagement.entity.User;
+import it.lraffaele.themoviedbhelper.usermanagement.repository.UserRepository;
+import it.lraffaele.themoviedbhelper.usermanagement.payload.UserLoginRequest;
+import it.lraffaele.themoviedbhelper.usermanagement.payload.UserSignUpRequest;
 import java.util.Optional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -23,7 +22,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 @RequiredArgsConstructor
-public class AuthService {
+public class AuthenticationService {
 
   private final UserRepository userRepository;
   private final PasswordEncoder passwordEncoder;

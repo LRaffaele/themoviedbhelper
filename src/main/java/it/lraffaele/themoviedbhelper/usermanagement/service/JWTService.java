@@ -1,10 +1,11 @@
-package it.lraffaele.themoviedbhelper.security;
+package it.lraffaele.themoviedbhelper.usermanagement.service;
 
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.JWTCreator;
 import com.auth0.jwt.algorithms.Algorithm;
 import com.auth0.jwt.exceptions.TokenExpiredException;
 import com.auth0.jwt.interfaces.DecodedJWT;
+import it.lraffaele.themoviedbhelper.usermanagement.security.UserPrincipal;
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;
 import lombok.RequiredArgsConstructor;

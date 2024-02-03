@@ -1,8 +1,7 @@
-package it.lraffaele.themoviedbhelper.security;
+package it.lraffaele.themoviedbhelper.usermanagement.security;
 
-import it.lraffaele.themoviedbhelper.entities.User;
-import it.lraffaele.themoviedbhelper.repositories.UserRepository;
-import it.lraffaele.themoviedbhelper.security.UserPrincipal;
+import it.lraffaele.themoviedbhelper.usermanagement.entity.User;
+import it.lraffaele.themoviedbhelper.usermanagement.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

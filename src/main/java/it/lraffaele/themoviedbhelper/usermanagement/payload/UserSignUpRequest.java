@@ -1,4 +1,4 @@
-package it.lraffaele.themoviedbhelper.payload.requests;
+package it.lraffaele.themoviedbhelper.usermanagement.payload;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
