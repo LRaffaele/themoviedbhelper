@@ -7,10 +7,9 @@ import jakarta.validation.constraints.Size;
 import lombok.Getter;
 
 @Getter
-public class SignUpRequest {
+public class UserSignUpRequest {
 
-  @NotBlank
-  @Size(min = 6, max = 20)
+  @NotBlank @Size(min = 6, max = 20)
   private String username;
 
   @Pattern(regexp = "^[a-zA-Z0-9]{6,50}$",
@@ -18,8 +17,7 @@ public class SignUpRequest {
           + " La lunghezza deve essere compresa tra 6 e 50")
   private String password;
 
-  @NotBlank
-  @Email
+  @NotBlank @Email
   private String email;
 
 

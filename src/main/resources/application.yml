@@ -5,6 +5,9 @@ spring:
   application:
     name: moviedb_helper
 
+  config:
+    import: optional:file:.env[.properties]
+
   datasource:
     url: ${datasourceUrl}
     username: ${dbUsername}
@@ -12,7 +15,7 @@ spring:
 
   jpa:
     hibernate:
-      ddl-auto: create-drop
+      ddl-auto: update
     properties:
       format_sql: true
       dialect: org.hibernate.dialect.MariaDBDialect
@@ -24,4 +27,5 @@ logging:
     it.lraffaele.themoviedbhelper: info
     org.hibernate.orm.jdbc.bind: trace
     org.springframework: info
+
 

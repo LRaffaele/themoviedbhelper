@@ -36,6 +36,9 @@ build/
 # Compiled class file
 *.class
 
+# Environment variables
+*.env
+
 # Log file
 *.log
 
